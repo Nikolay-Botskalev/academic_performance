@@ -1,9 +1,13 @@
 indent-width = 4
 line-length = 79
 required-version = ">=0.11.11"
-target-version = "py39"
+target-version = "py312"
 
 preview = true
+
+exclude = [
+    "tests/",
+]
 
 [format]
 docstring-code-format = true
@@ -14,10 +18,6 @@ quote-style = "single"
 [lint]
 ignore=["D100", "D101", "D105", "D106", "D107", "D203", "D213", "ANN001", "ANN204"]
 select=["E3", "E5", "E4", "E7", "E9", "W", "C90", "I", "N", "D", "F", "S", "ANN", "ASYNC", "A", "COM", "RET"]
-
-[lint.extend-per-file-ignores]
-"__init__.py" = ["D104", "E402", "E401"]
-"src/tests/**/*.py" = ["D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107"]
 
 [lint.flake8-annotations]
 allow-star-arg-any = true

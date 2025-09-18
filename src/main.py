@@ -33,7 +33,6 @@ def main() -> None:
     except KeyError:
         print('Неизвестный тип отчета.')
     else:
-        # Вывод результата
         terminal_output(result, REPORT_MODE[args.report].field_names)
 
 
